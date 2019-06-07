@@ -1,5 +1,5 @@
 # Rofibookhandler
-This is a simple bash script to select and open a book using rofi and you can also search for new books form the last option.
+This is a simple bash script to select and open a book using rofi and you can also search for new books form the find_new_book option.
 
 ## Installation
 
@@ -9,6 +9,15 @@ $ sudo chmod +x rofibookselector.sh
 ```
 Then just change the $Dir variable to your books folder.
 
+## How to run
+
+```sh
+./rofibookselector.sh
+```
+
 ## Dependencies
 * rofi
 * zathura
+
+## Adding links
+After running the script once there will be a file called find_new_book in your books folder, add and delete links as you please ;)
