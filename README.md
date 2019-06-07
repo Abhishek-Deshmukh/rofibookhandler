@@ -9,6 +9,8 @@ $ sudo chmod +x rofibookselector.sh
 ```
 Then just change the $Dir variable to your books folder.
 
+If you wish change the $Reader to your pdf/document reader, the default is zathura
+
 ## How to run
 
 ```sh
@@ -18,6 +20,7 @@ Then just change the $Dir variable to your books folder.
 ## Dependencies
 * rofi
 * zathura
+* zathuramupdf
 
 ## Adding links
 After running the script once there will be a file called find_new_book in your books folder, add and delete links as you please ;)

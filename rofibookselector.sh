@@ -1,27 +1,28 @@
 #!/bin/bash
-Dir=~/Downloads/books_
+Dirt=~/Downloads/books
+Reader=zathura
 
-if [ ! -s $Dir/find_new_book ]
+if [ ! -s $Dirt/find_new_book ]
 then
-	touch $Dir/find_new_book
-	echo libgen.io >> $Dir/find_new_book
-	echo goodreads.com >> $Dir/find_new_book
+	touch $Dirt/find_new_book
+	echo libgen.io >> $Dirt/find_new_book
+	echo goodreads.com >> $Dirt/find_new_book
 fi
 
-selection=$(ls $Dir | rofi -dmenu)
+selection=$(ls $Dirt | rofi -dmenu)
 
 case $selection in
 	'')
 		exit
 		;;
 	find_new_book)
-		link=$(cat $Dir/find_new_book | rofi -dmenu)
+		link=$(cat $Dirt/find_new_book | rofi -dmenu)
 		if [ $link!='' ]
 		then
 			$BROWSER $link
 		fi
 		;;
 	*)
-		zathura $Dir/$selection
+		$Reader $Dirt/$selection
 		;;
 esac
