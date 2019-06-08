@@ -1,5 +1,5 @@
 # Rofibookhandler
-This is a simple bash script to select and open a book using rofi and you can also search for new books form the find_new_book option.
+This is a simple bash script to select and open a book using rofi and you can also search for new books form the .find_new_book option.
 
 ## Installation
 
@@ -23,4 +23,4 @@ If you wish change the $Reader to your pdf/document reader, the default is zathu
 * zathuramupdf
 
 ## Adding links
-After running the script once there will be a file called find_new_book in your books folder, add and delete links as you please ;)
+After running the script once there will be a file called .find_new_book in your books folder, add and delete links as you please ;)

@@ -2,21 +2,27 @@
 Dirt=~/Downloads/books
 Reader=zathura
 
-if [ ! -s $Dirt/find_new_book ]
+if [ ! -s $Dirt/.find_new_book ]
 then
-	touch $Dirt/find_new_book
-	echo libgen.io >> $Dirt/find_new_book
-	echo goodreads.com >> $Dirt/find_new_book
+	touch $Dirt/.find_new_book
+	echo libgen.io >> $Dirt/.find_new_book
+	echo goodreads.com >> $Dirt/.find_new_book
 fi
 
-selection=$(ls $Dirt | rofi -dmenu)
+selection=$(ls $Dirt -a | rofi -dmenu)
 
 case $selection in
-	'')
+	"")
 		exit
 		;;
-	find_new_book)
-		link=$(cat $Dirt/find_new_book | rofi -dmenu)
+	.)
+		exit
+		;;
+	..)
+		exit
+		;;
+	.find_new_book)
+		link=$(cat $Dirt/.find_new_book | rofi -dmenu)
 		if [ $link!='' ]
 		then
 			$BROWSER $link
