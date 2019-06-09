@@ -1,12 +1,12 @@
 #!/bin/bash
 Dirt=~/Downloads/books
 Reader=zathura
-
 if [ ! -s $Dirt/.find_new_book ]
 then
 	touch $Dirt/.find_new_book
 	echo libgen.io >> $Dirt/.find_new_book
 	echo goodreads.com >> $Dirt/.find_new_book
+	echo bookbub.com >> $Dirt/.find_new_book
 fi
 
 selection=$(ls $Dirt -a | rofi -dmenu)
@@ -29,6 +29,6 @@ case $selection in
 		fi
 		;;
 	*)
-		$Reader $Dirt/$selection
+		$Reader $Dirt/"$selection"
 		;;
 esac
